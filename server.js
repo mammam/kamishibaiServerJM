@@ -1,8 +1,8 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const faker = require("faker");
-const times = require("lodash.times");
-const random = require("lodash.random");
+// const bodyParser = require("body-parser");
+// const faker = require("faker");
+// const times = require("lodash.times");
+// const random = require("lodash.random");
 const db = require("./models");
 const apiEmpleados = require("./app/empleado");
 const apiControles = require("./app/control");
@@ -11,7 +11,7 @@ const apiControlesDiarios = require("./app/controlDiario");
 const apiTarjetasControles = require("./app/tarjetaControl");
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(express.static("app/public"));
 
 apiEmpleados(app, db);
