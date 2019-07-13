@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('Controles', {
+  return sequelize.define('controles', {
     idControl: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
