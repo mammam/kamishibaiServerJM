@@ -4,9 +4,10 @@ module.exports = (app, db) => {
         db.controlesDiarios.findAll().then((result) => res.json(result))
     );
 
-    app.get(baseUrl + "/controlDiario/:id", (req, res) =>
-        db.controlDiarios.findByPk(req.params.id).then((result) => res.json(result))
-    );
+    app.get(baseUrl + "/controlDiario/:id", (req, res) => {
+        console.log(req.params);
+        db.controlesDiarios.findByPk(req.params.id).then((result) => res.json(result));
+    });
 
     app.post(baseUrl + "/controlDiario", (req, res) =>
         db.controlesDiarios.create({
@@ -25,7 +26,7 @@ module.exports = (app, db) => {
             idEmpleado: req.body.idEmpleado
         }, {
             where: {
-                idcontrolDiario: req.body.idcontrolDiario
+                idControlDiario: req.body.idControlDiario
             }
         }).then((result) => res.json(result))
     );
@@ -33,7 +34,7 @@ module.exports = (app, db) => {
     app.delete(baseUrl + "/controlDiario/:id", (req, res) =>
         db.controlesDiarios.destroy({
             where: {
-                idcontrolDiario: req.params.id
+                idControlDiario: req.params.id
             }
         }).then((result) => res.json(result))
     );

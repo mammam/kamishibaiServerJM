@@ -12,17 +12,17 @@ module.exports = (app, db) => {
         db.controles.create({
             controlNombre: req.body.controlNombre,
             idLineaEnvasado: req.body.idLineaEnvasado
-         }).then((result) => res.json(result))
+        }).then((result) => res.json(result))
     );
-    
-    
+
+
     app.put(baseUrl + "/control", (req, res) =>
         db.controles.update({
             controlNombre: req.body.controlNombre,
             idLineaEnvasado: req.body.idLineaEnvasado
         }, {
             where: {
-                idcontrol: req.body.idcontrol
+                idControl: req.body.idControl
             }
         }).then((result) => res.json(result))
     );
