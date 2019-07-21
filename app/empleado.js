@@ -12,7 +12,19 @@ module.exports = (app, db) => {
         db.empleados.create({
             nombre: req.body.nombre,
             primerApellido: req.body.primerApellido,
-            segundoApellido: req.body.segundoApellido
+            segundoApellido: req.body.segundoApellido,
+            userName: req.body.userName,
+            password: req.body.password
+        }).then((result) => res.json(result))
+    );
+
+    app.get(baseUrl + "/empleado/login", (req, res) =>
+        db.empleados.findOne({
+            where: {
+                userName: req.body.userName,
+                password: req.body.password
+            }
+
         }).then((result) => res.json(result))
     );
 
@@ -20,7 +32,9 @@ module.exports = (app, db) => {
         db.empleados.update({
             nombre: req.body.nombre,
             primerApellido: req.body.primerApellido,
-            segundoApellido: req.body.segundoApellido
+            segundoApellido: req.body.segundoApellido,
+            userName: req.body.userName,
+            password: req.body.password
         }, {
             where: {
                 idEmpleado: req.body.idEmpleado

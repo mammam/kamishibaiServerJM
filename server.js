@@ -5,6 +5,7 @@ const express = require("express");
 // const random = require("lodash.random");
 const db = require("./models");
 const apiEmpleados = require("./app/empleado");
+const login = require("./app/login");
 const apiControles = require("./app/control");
 const apiLineasEnvasado = require("./app/lineaEnvasado");
 const apiControlesDiarios = require("./app/controlDiario");
@@ -21,6 +22,7 @@ app.use(function(req, res, next) {
 });
 
 apiEmpleados(app, db);
+login(app, db);
 apiControles(app, db);
 apiLineasEnvasado(app, db);
 apiControlesDiarios(app, db);
