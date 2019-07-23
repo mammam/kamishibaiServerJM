@@ -27,6 +27,7 @@ CREATE TABLE IF NOT EXISTS `Control`.`Empleados` (
   `segundoApellido` VARCHAR(45) NULL,
   `userName` VARCHAR(45) NULL,
   `password` VARCHAR(12) NULL,
+  `rol` VARCHAR(16) NULL,
   `createdAt` datetime DEFAULT NULL COMMENT 'created time',
   `updatedAt` datetime DEFAULT NULL COMMENT 'updated time',
   PRIMARY KEY (`idEmpleado`))
@@ -111,7 +112,7 @@ CREATE INDEX `fk_controlesDiarios_Empleados1_idx` ON `Control`.`controlesDiarios
 
 CREATE TABLE IF NOT EXISTS `Control`.`tarjetasControles` (
   `idTarjetaControl` INT NOT NULL AUTO_INCREMENT,
-  `descripcion` VARCHAR(200) NULL,
+  `descripcion` VARCHAR(45) NULL,
   `horaTarea` VARCHAR(45) NULL,
   `hora` INT NULL,
   `resultado` VARCHAR(12) NULL,

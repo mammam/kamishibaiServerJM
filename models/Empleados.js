@@ -27,6 +27,10 @@ module.exports = function(sequelize, DataTypes) {
         password: {
             type: DataTypes.STRING(12),
             allowNull: true
+        },
+        rol: {
+            type: DataTypes.STRING(15),
+            allowNull: false
         }
     }, {
         tableName: 'Empleados'

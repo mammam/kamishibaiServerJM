@@ -14,7 +14,8 @@ module.exports = (app, db) => {
             primerApellido: req.body.primerApellido,
             segundoApellido: req.body.segundoApellido,
             userName: req.body.userName,
-            password: req.body.password
+            password: req.body.password,
+            rol: req.body.rol
         }).then((result) => res.json(result))
     );
 
@@ -34,7 +35,8 @@ module.exports = (app, db) => {
             primerApellido: req.body.primerApellido,
             segundoApellido: req.body.segundoApellido,
             userName: req.body.userName,
-            password: req.body.password
+            password: req.body.password,
+            rol: req.body.rol
         }, {
             where: {
                 idEmpleado: req.body.idEmpleado
