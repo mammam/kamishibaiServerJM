@@ -10,6 +10,4 @@ module.exports = (app, db) => {
 
         }).then((result) => res.json(result))
     );
-
-
-}
+};
