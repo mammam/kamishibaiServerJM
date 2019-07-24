@@ -7,6 +7,7 @@ const db = require("./models");
 const apiEmpleados = require("./app/empleado");
 const login = require("./app/login");
 const apiControles = require("./app/control");
+const apiControlesQuery = require("./app/controlQuery");
 const apiLineasEnvasado = require("./app/lineaEnvasado");
 const apiControlesDiarios = require("./app/controlDiario");
 const apiControlesDiariosQuery = require("./app/controlDiarioQuery");
@@ -25,6 +26,7 @@ app.use(function(req, res, next) {
 apiEmpleados(app, db);
 login(app, db);
 apiControles(app, db);
+apiControlesQuery(app, db);
 apiLineasEnvasado(app, db);
 apiControlesDiarios(app, db);
 apiControlesDiariosQuery(app, db);
