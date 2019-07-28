@@ -43,6 +43,10 @@ module.exports = function(sequelize, DataTypes) {
         fechaHoraControl: {
             type: DataTypes.DATEONLY,
             allowNull: true
+        },
+        createdAt: {
+            type: DataTypes.DATEONLY,
+            allowNull: true
         }
     }, {
         tableName: 'tarjetasControles'

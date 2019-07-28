@@ -6,7 +6,10 @@ module.exports = (app, db) => {
 
     app.get(baseUrl + "/controlDiario/:id", (req, res) => {
         console.log(req.params);
-        db.controlesDiarios.findByPk(req.params.id).then((result) => res.json(result));
+        db.controlesDiarios.findByPk(req.params.id).then((result) => {
+            console.log(result);
+            return res.json(result);
+        });
     });
 
     app.post(baseUrl + "/controlDiario", (req, res) =>
@@ -15,7 +18,10 @@ module.exports = (app, db) => {
             turno: req.body.turno,
             fecha: req.body.fecha,
             idEmpleado: req.body.idEmpleado
-        }).then((result) => res.json(result))
+        }).then(result => {
+            console.log(result);
+            return res.json(result);
+        })
     );
 
     app.put(baseUrl + "/controlDiario", (req, res) =>
@@ -28,7 +34,12 @@ module.exports = (app, db) => {
             where: {
                 idControlDiario: req.body.idControlDiario
             }
-        }).then((result) => res.json(result))
+        }).then((result) => {
+            console.log(result);
+            return res.json(result);
+        }).catch(function(err) {
+            console.log(err);
+        })
     );
 
     app.delete(baseUrl + "/controlDiario/:id", (req, res) =>

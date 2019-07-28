@@ -1,7 +1,5 @@
-/* jshint indent: 2 */
-
 module.exports = function(sequelize, DataTypes) {
-    return sequelize.define('controlesDiarios', {
+    const ControlDiario = sequelize.define('controlesDiarios', {
         idControlDiario: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
@@ -35,4 +33,6 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         tableName: 'controlesDiarios'
     });
+
+    return ControlDiario;
 };

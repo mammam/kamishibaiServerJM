@@ -13,6 +13,7 @@ const apiControlesDiarios = require("./app/controlDiario");
 const apiControlesDiariosQuery = require("./app/controlDiarioQuery");
 const apiTarjetasControles = require("./app/tarjetaControl");
 const apiTarjetasControlesEmpleado = require("./app/tarjetaControlEmpleado");
+const apiTurnoControl = require("./app/tarjetaControl");
 
 const app = express();
 app.use(express.json());
@@ -34,6 +35,7 @@ apiControlesDiarios(app, db);
 apiControlesDiariosQuery(app, db);
 apiTarjetasControles(app, db);
 apiTarjetasControlesEmpleado(app, db);
+apiTurnoControl(app, db);
 
 db.sequelize.sync().then(() => {
     app.listen(8084, () => console.log("App listening on port 8084!"));
