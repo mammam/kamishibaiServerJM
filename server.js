@@ -13,7 +13,7 @@ const apiControlesDiarios = require("./app/controlDiario");
 const apiControlesDiariosQuery = require("./app/controlDiarioQuery");
 const apiTarjetasControles = require("./app/tarjetaControl");
 const apiTarjetasControlesEmpleado = require("./app/tarjetaControlEmpleado");
-const apiTurnoControl = require("./app/tarjetaControl");
+const apiTurnoControl = require("./app/turnoController");
 
 const app = express();
 app.use(express.json());
