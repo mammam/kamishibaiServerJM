@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         fecha: {
-            type: DataTypes.DATEONLY,
+            type: 'TIMESTAMP',
             allowNull: true
         },
         idEmpleado: {
