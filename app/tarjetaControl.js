@@ -10,21 +10,31 @@ module.exports = (app, db) => {
 
     app.post(baseUrl + "/tarjetaControl", (req, res) =>
         db.tarjetasControles.create({
+            descripcion: req.body.descripcion,
+            horaTarea: req.body.horaTarea,
+            horaDesde: req.body.horaDesde,
+            horaHasta: req.body.horaHasta,
             hora: req.body.hora,
             resultado: req.body.resultado,
             observaciones: req.body.observaciones,
             idControlDiario: req.body.idControlDiario,
-            enHora: req.body.enHora
+            enHora: req.body.enHora,
+            fechaHoraControl: req.body.fechaHoraControl
         }).then((result) => res.json(result))
     );
 
     app.put(baseUrl + "/tarjetaControl", (req, res) =>
         db.tarjetasControles.update({
+            descripcion: req.body.descripcion,
+            horaTarea: req.body.horaTarea,
+            horaDesde: req.body.horaDesde,
+            horaHasta: req.body.horaHasta,
             hora: req.body.hora,
             resultado: req.body.resultado,
             observaciones: req.body.observaciones,
             idControlDiario: req.body.idControlDiario,
-            enHora: req.body.enHora
+            enHora: req.body.enHora,
+            fechaHoraControl: req.body.fechaHoraControl
         }, {
             where: {
                 idTarjetaControl: req.body.idTarjetaControl

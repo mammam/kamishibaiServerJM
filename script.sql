@@ -88,6 +88,8 @@ CREATE TABLE IF NOT EXISTS `Control`.`turno` (
   `nombreTurno` VARCHAR(45) NULL,
   `desde` VARCHAR(45) NULL,
   `hasta` VARCHAR(45) NULL,
+  `createdAt` DATETIME NULL DEFAULT NULL COMMENT 'created time',
+  `updatedAt` DATETIME NULL DEFAULT NULL COMMENT 'updated time',
   PRIMARY KEY (`idtTurno`))
 ENGINE = InnoDB;
 
@@ -137,8 +139,10 @@ DROP TABLE IF EXISTS `Control`.`tarjetasControles` ;
 
 CREATE TABLE IF NOT EXISTS `Control`.`tarjetasControles` (
   `idTarjetaControl` INT(11) NOT NULL AUTO_INCREMENT,
-  `descripcion` VARCHAR(45) NULL DEFAULT NULL,
+  `descripcion` VARCHAR(200) NULL DEFAULT NULL,
   `horaTarea` VARCHAR(45) NULL DEFAULT NULL,
+  `horaDesde` VARCHAR(45) NULL DEFAULT NULL,
+  `horaHasta` VARCHAR(45) NULL DEFAULT NULL,
   `hora` INT(11) NULL DEFAULT NULL,
   `resultado` VARCHAR(12) NULL DEFAULT NULL,
   `observaciones` VARCHAR(45) NULL DEFAULT NULL,

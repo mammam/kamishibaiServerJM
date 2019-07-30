@@ -13,7 +13,15 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         horaTarea: {
-            type: DataTypes.STRING(200),
+            type: DataTypes.STRING(45),
+            allowNull: true
+        },
+        horaDesde: {
+            type: DataTypes.STRING(45),
+            allowNull: true
+        },
+        horaHasta: {
+            type: DataTypes.STRING(45),
             allowNull: true
         },
         hora: {
@@ -41,7 +49,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         fechaHoraControl: {
-            type: DataTypes.DATEONLY,
+            type: 'TIMESTAMP',
             allowNull: true
         },
         createdAt: {
