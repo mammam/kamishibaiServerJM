@@ -5,7 +5,10 @@ module.exports = (app, db) => {
             where: {
                 idControlDiario: req.params.idControlDiario,
                 createdAt: new Date()
-            }
+            },
+            order: [
+                ['horaDesde', 'ASC']
+            ]
         }).then((result) => res.json(result))
     );
 }
