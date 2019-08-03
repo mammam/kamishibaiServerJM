@@ -19,7 +19,8 @@ module.exports = (app, db) => {
             observaciones: req.body.observaciones,
             idControlDiario: req.body.idControlDiario,
             enHora: req.body.enHora,
-            fechaHoraControl: req.body.fechaHoraControl
+            fechaHoraControl: req.body.fechaHoraControl,
+            orden: req.body.orden
         }).then((result) => res.json(result))
     );
 
@@ -34,7 +35,8 @@ module.exports = (app, db) => {
             observaciones: req.body.observaciones,
             idControlDiario: req.body.idControlDiario,
             enHora: req.body.enHora,
-            fechaHoraControl: req.body.fechaHoraControl
+            fechaHoraControl: req.body.fechaHoraControl,
+            orden: req.body.orden
         }, {
             where: {
                 idTarjetaControl: req.body.idTarjetaControl

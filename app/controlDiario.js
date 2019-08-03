@@ -17,7 +17,8 @@ module.exports = (app, db) => {
             idControl: req.body.idControl,
             turno: req.body.turno,
             fecha: req.body.fecha,
-            idEmpleado: req.body.idEmpleado
+            idEmpleado: req.body.idEmpleado,
+            idtTurno: req.body.idtTurno
         }).then(result => {
             console.log(result);
             return res.json(result);
@@ -29,7 +30,8 @@ module.exports = (app, db) => {
             idControl: req.body.idControl,
             turno: req.body.turno,
             fecha: req.body.fecha,
-            idEmpleado: req.body.idEmpleado
+            idEmpleado: req.body.idEmpleado,
+            idtTurno: req.body.idtTurno
         }, {
             where: {
                 idControlDiario: req.body.idControlDiario

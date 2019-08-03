@@ -48,6 +48,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             allowNull: true
         },
+        orden: {
+            type: DataTypes.INTEGER(11),
+            allowNull: true
+        },
         fechaHoraControl: {
             type: 'TIMESTAMP',
             allowNull: true

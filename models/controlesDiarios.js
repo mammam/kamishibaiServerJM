@@ -29,6 +29,14 @@ module.exports = function(sequelize, DataTypes) {
                 model: 'Empleados',
                 key: 'idEmpleado'
             }
+        },
+        idtTurno: {
+            type: DataTypes.INTEGER(11),
+            allowNull: true,
+            references: {
+                model: 'turno',
+                key: 'idtTurno'
+            }
         }
     }, {
         tableName: 'controlesDiarios'

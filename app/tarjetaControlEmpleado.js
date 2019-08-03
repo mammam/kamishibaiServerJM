@@ -7,7 +7,7 @@ module.exports = (app, db) => {
                 createdAt: new Date()
             },
             order: [
-                ['horaDesde', 'ASC']
+                ['orden', 'ASC']
             ]
         }).then((result) => res.json(result))
     );

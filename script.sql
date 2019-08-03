@@ -148,6 +148,7 @@ CREATE TABLE IF NOT EXISTS `Control`.`tarjetasControles` (
   `observaciones` VARCHAR(45) NULL DEFAULT NULL,
   `idControlDiario` INT(11) NULL DEFAULT NULL,
   `enHora` BIT(1) NULL DEFAULT NULL,
+  `orden` INT(11) NULL DEFAULT NULL,
   `fechaHoraControl` DATETIME NULL DEFAULT NULL,
   `createdAt` DATETIME NULL DEFAULT NULL COMMENT 'created time',
   `updatedAt` DATETIME NULL DEFAULT NULL COMMENT 'updated time',
@@ -166,3 +167,11 @@ DEFAULT CHARACTER SET = utf8;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+INSERT INTO `Control`.`Empleados` (`idEmpleado`, `nombre`, `primerApellido`, `userName`, `password`, `rol`) VALUES ('1', 'Juan Manuel', 'Lopez', 'jlopez', '123456', 'ADMINISTRADOR');
+
+
+INSERT INTO `Control`.`turno` (`idtTurno`, `nombreTurno`, `desde`, `hasta`) VALUES ('1', 'Mañana', '7', '15');
+INSERT INTO `Control`.`turno` (`idtTurno`, `nombreTurno`, `desde`, `hasta`) VALUES ('2', 'Tarde', '15', '23');
+INSERT INTO `Control`.`turno` (`idtTurno`, `nombreTurno`, `desde`, `hasta`) VALUES ('3', 'Noche', '23', '7');
