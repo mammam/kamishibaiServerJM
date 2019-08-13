@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `Control`.`lineasEnvasado` ;
 
 CREATE TABLE IF NOT EXISTS `Control`.`lineasEnvasado` (
   `idLineaEnvasado` INT(11) NOT NULL AUTO_INCREMENT,
-  `descripcion` VARCHAR(45) NULL DEFAULT NULL,
+  `descripcion` VARCHAR(200) NULL DEFAULT NULL,
   `createdAt` DATETIME NULL DEFAULT NULL COMMENT 'created time',
   `updatedAt` DATETIME NULL DEFAULT NULL COMMENT 'updated time',
   PRIMARY KEY (`idLineaEnvasado`))
@@ -62,7 +62,7 @@ DROP TABLE IF EXISTS `Control`.`Controles` ;
 
 CREATE TABLE IF NOT EXISTS `Control`.`Controles` (
   `idControl` INT(11) NOT NULL AUTO_INCREMENT,
-  `controlNombre` VARCHAR(45) NULL DEFAULT NULL,
+  `controlNombre` VARCHAR(200) NULL DEFAULT NULL,
   `idLineaEnvasado` INT(11) NULL DEFAULT NULL,
   `createdAt` DATETIME NULL DEFAULT NULL COMMENT 'created time',
   `updatedAt` DATETIME NULL DEFAULT NULL COMMENT 'updated time',
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `Control`.`tarjetasControles` (
   `horaHasta` VARCHAR(45) NULL DEFAULT NULL,
   `hora` INT(11) NULL DEFAULT NULL,
   `resultado` VARCHAR(12) NULL DEFAULT NULL,
-  `observaciones` VARCHAR(45) NULL DEFAULT NULL,
+  `observaciones` VARCHAR(200) NULL DEFAULT NULL,
   `idControlDiario` INT(11) NULL DEFAULT NULL,
   `enHora` BIT(1) NULL DEFAULT NULL,
   `orden` INT(11) NULL DEFAULT NULL,

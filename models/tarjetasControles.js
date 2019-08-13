@@ -33,7 +33,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: true
         },
         observaciones: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.STRING(200),
             allowNull: true
         },
         idControlDiario: {
