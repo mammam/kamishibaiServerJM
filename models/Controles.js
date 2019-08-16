@@ -19,6 +19,38 @@ module.exports = function(sequelize, DataTypes) {
                 model: 'lineasEnvasado',
                 key: 'idLineaEnvasado'
             }
+        },
+        descripcionTarjeta1: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
+        descripcionTarjeta2: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
+        descripcionTarjeta3: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
+        descripcionTarjeta4: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
+        descripcionTarjeta5: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
+        descripcionTarjeta6: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
+        descripcionTarjeta7: {
+            type: DataTypes.STRING(200),
+            allowNull: true
+        },
+        descripcionTarjeta8: {
+            type: DataTypes.STRING(200),
+            allowNull: true
         }
     }, {
         tableName: 'Controles'
