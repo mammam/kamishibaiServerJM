@@ -178,7 +178,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 INSERT INTO `Control`.`Empleados` (`idEmpleado`, `nombre`, `primerApellido`, `userName`, `password`, `rol`) VALUES ('1', 'Juan Manuel', 'Lopez', 'jlopez', '123456', 'ADMINISTRADOR');
-
+INSERT INTO `Control`.`Empleados` (`idEmpleado`, `nombre`, `primerApellido`, `userName`, `password`, `rol`) VALUES ('2', 'Miguel Angel', 'Martinez', 'mam', 'mam0121', 'ADMINISTRADOR');
 
 INSERT INTO `Control`.`turno` (`idtTurno`, `nombreTurno`, `desde`, `hasta`) VALUES ('1', 'Mañana', '7', '15');
 INSERT INTO `Control`.`turno` (`idtTurno`, `nombreTurno`, `desde`, `hasta`) VALUES ('2', 'Tarde', '15', '23');
